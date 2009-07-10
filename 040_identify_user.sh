@@ -9,17 +9,17 @@ function check_admin_user () {
 
 
 function add_before_filter_to_application_controller () {
-APPLICATION_CONTROLLER="${TOP_DIR}/app/controllers/application.rb"
+    APPLICATION_CONTROLLER="${TOP_DIR}/app/controllers/application_controller.rb"
 
-cat >> ${APPLICATION_CONTROLLER} <<EOF
+    cat >> ${APPLICATION_CONTROLLER} <<EOF
 # See page 178
 # place after the class line
 before_filter :identify_user, :except => :login
 EOF
 
-${EDITOR} ${APPLICATION_CONTROLLER}
+    ${EDITOR} ${APPLICATION_CONTROLLER}
 
-cat >> ${APPLICATION_CONTROLLER} <<EOF
+    cat >> ${APPLICATION_CONTROLLER} <<EOF
 # See page 178
 def identify_user
   if User.find_by_id(session[:user_id])
