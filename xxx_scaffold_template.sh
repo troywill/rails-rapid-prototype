@@ -1,4 +1,4 @@
-source ./tdw-lib.sh
+source ./rrp.sh
 NAME='dummy'
 PLURAL_NAME='dummies'
 

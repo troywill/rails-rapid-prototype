@@ -1,4 +1,4 @@
-source ./tdw-lib.sh
+source ./rrp.sh
 WELCOME_CONTROLLER="${TOP_DIR}/app/controllers/welcome_controller.rb"
 
 function edit_login_method () {

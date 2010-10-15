@@ -1,4 +1,4 @@
-source ./tdw-lib.sh
+source ./rrp.sh
 
 USER_MODEL="${TOP_DIR}/app/models/user.rb"
 

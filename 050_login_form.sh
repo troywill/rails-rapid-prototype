@@ -1,4 +1,4 @@
-source ./tdw-lib.sh
+source ./rrp-lib.sh
 LOGIN_PAGE="${TOP_DIR}/app/views/welcome/login.html.erb"
 
 function edit_login_form () {

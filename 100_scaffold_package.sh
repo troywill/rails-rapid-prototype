@@ -1,4 +1,4 @@
-source ./tdw-lib.sh
+source ./rrp.sh
 NAME='package'
 PLURAL_NAME='packages'
 

@@ -1,4 +1,4 @@
-source ./tdw-lib.sh
+source ./rrp-lib.sh
 START_SCRIPT='rails-server.sh'
 
 cp -v ${START_SCRIPT} ${TOP_DIR}
