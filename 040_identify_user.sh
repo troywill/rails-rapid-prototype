@@ -1,4 +1,4 @@
-source ./rrp.sh
+source ./rrp-lib.sh
 
 function check_admin_user () {
     # Not a big deal, but should create initial user before adding

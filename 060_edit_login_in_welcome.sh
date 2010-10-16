@@ -1,4 +1,4 @@
-source ./rrp.sh
+source ./rrp-lib.sh
 WELCOME_CONTROLLER="${TOP_DIR}/app/controllers/welcome_controller.rb"
 
 function edit_login_method () {

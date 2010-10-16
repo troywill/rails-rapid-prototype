@@ -1,4 +1,4 @@
-source ./rrp.sh
+source ./rrp-lib.sh
 
 USER_MODEL="${TOP_DIR}/app/models/user.rb"
 

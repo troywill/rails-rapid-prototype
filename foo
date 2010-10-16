@@ -1,4 +1,4 @@
-source ./rrp.sh
+source ./rrp-lib.sh
 NAME='user'
 PLURAL_NAME='users'
 

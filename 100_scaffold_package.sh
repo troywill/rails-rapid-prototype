@@ -1,4 +1,4 @@
-source ./rrp.sh
+source ./rrp-lib.sh
 NAME='package'
 PLURAL_NAME='packages'
 
