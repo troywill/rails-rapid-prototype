@@ -2,7 +2,7 @@ source ./rrp-lib.sh
 NAME='EDIT_ME'
 
 function do_generate () {
-    ${SCRIPT_DIR}/generate scaffold ${NAME} name:string username:string password:string email:string
+    rails generate scaffold ${NAME} name:string username:string password:string email:string
     rake db:migrate
 }
 
