@@ -1,24 +1,19 @@
 source ./rrp-lib.sh
-NAME='dummy'
-PLURAL_NAME='dummies'
+NAME='EDIT_ME'
 
-function up () {
+function do_generate () {
     ${SCRIPT_DIR}/generate scaffold ${NAME} name:string username:string password:string email:string
     rake db:migrate
-}
-
-function down () {
-    echo
 }
 
 function edit_model () {
     MODEL="${TOP_DIR}/app/models/${NAME}.rb"
     cat >> ${MODEL} <<EOF
 
-validates_presence_of :name
-validates_presence_of :username
-validates_uniqueness_of :username
-validates_presence_of :password
+# validates_presence_of :name
+# validates_presence_of :username
+# validates_uniqueness_of :username
+# validates_presence_of :password
 EOF
 
     $EDITOR ${MODEL}
@@ -27,17 +22,13 @@ EOF
     
 }
 
-function edit_welcome_view () {
-    $EDITOR ${TOP_DIR}/app/views/welcome/index.html.erb
+function do_migration () {
+    echo "Run db:migrate?"
+    rake db:migrate
 }
 
-function migration () {
-    echo
-}
+###### Main program #######
 
-#######################################################################################
-
-up
+do_generate
 edit_model
-edit_welcome_view
-migration
+do_migration
