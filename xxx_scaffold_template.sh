@@ -1,20 +1,20 @@
 #!/bin/bash
 source ./rrp-lib.sh
-NAME='EDIT_ME'
+NAME='edit_me' # lower case singular
 
 function do_generate () {
-    rails generate scaffold ${NAME} name:string username:string password:string email:string
-    rake db:migrate
+    rails generate scaffold ${NAME} \
+	name:string \
+	username:string \
+	password:string \
+	email:string
 }
 
 function edit_model () {
     MODEL="${TOP_DIR}/app/models/${NAME}.rb"
     cat >> ${MODEL} <<EOF
-
-# validates_presence_of :name
-# validates_presence_of :username
-# validates_uniqueness_of :username
-# validates_presence_of :password
+#  validates :name, presence => true,
+#  validates :username, presence => true, uniqueness => true,
 EOF
 
     $EDITOR ${MODEL}
@@ -24,8 +24,7 @@ EOF
 }
 
 function do_migration () {
-    echo "Run db:migrate?"
-    rake db:migrate
+    read -p "Run db:migrate? <Ctrl-C> to quit" && rake db:migrate
 }
 
 ###### Main program #######
