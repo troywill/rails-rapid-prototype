@@ -13,6 +13,8 @@ function do_generate () {
 function edit_model () {
     MODEL="${TOP_DIR}/app/models/${NAME}.rb"
     cat >> ${MODEL} <<EOF
+#  belongs_to : XXX
+#  has_many : XXX
 #  validates :name, presence => true,
 #  validates :username, presence => true, uniqueness => true,
 EOF
