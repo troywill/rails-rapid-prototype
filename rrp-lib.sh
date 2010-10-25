@@ -1,2 +1,3 @@
 EDITOR=emacs
-SCRIPT_DIR="../.."
+# EDITOR=mate
+TOP_DIR="../.."
