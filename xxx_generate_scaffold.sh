@@ -15,8 +15,8 @@ function edit_model () {
     cat >> ${MODEL} <<EOF
 #  belongs_to : XXX
 #  has_many : XXX
-#  validates :name, presence => true,
-#  validates :username, presence => true, uniqueness => true,
+#  validates :name, :presence => true,
+#  validates :username, :presence => true, :uniqueness => true
 EOF
 
     $EDITOR ${MODEL}
