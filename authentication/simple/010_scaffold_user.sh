@@ -3,7 +3,7 @@ source ./rrp-lib.sh
 NAME='user'
 
 function up () {
-    ${SCRIPT_DIR}/generate scaffold ${NAME} \
+    rails generate scaffold ${NAME} \
 	name:string \
 	username:string \
 	password:string \
