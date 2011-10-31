@@ -1,3 +1,4 @@
+#!/bin/bash
 source ./rrp-lib.sh
 
 function check_admin_user () {
