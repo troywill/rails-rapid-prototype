@@ -11,11 +11,9 @@ chdir ../../app
 screen 0 bash
 title "app"
 
-chdir models
-screen 1 emacs --no-window-system.
+screen 1 emacs --no-window-system models
 title "models"
 
 chdir ../controllers
-screen 1 emacs --no-window-system.
+screen 1 emacs --no-window-system controllers
 title "controllers"
-
