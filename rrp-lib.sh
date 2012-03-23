@@ -1,4 +1,4 @@
-# 2013-03-13 TDW <troydwill@gmail.com>
-EDITOR=emacs
+# 2012-03-17 TDW <troydwill@gmail.com>
+EDITOR='emacs --no-window-system'
 # EDITOR=mate
 TOP_DIR="../.."
