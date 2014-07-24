@@ -1,0 +1,31 @@
+* Introduction
+  1. [ ] generate welcome controller
+     #+BEGIN_SRC sh
+       rails generate controller welcome index login logout # if using authentication
+     #+END_SRC
+  2. [ ] generate location scaffold
+     #+BEGIN_SRC sh
+       rails generate scaffold location
+               title:string \
+               url:string \
+               hours:string \
+               last_viewed:datetime
+       }
+     #+END_SRC
+  3. [ ] Edit location model
+     Don't forget to edit foreign key model, if applicable
+     #+BEGIN_SRC ruby
+       #  belongs_to : XXX
+       #  has_many : XXX
+       validates :name, :presence => true,
+       validates :username, :presence => true, :uniqueness => true
+     #+END_SRC
+  4. [ ] Migrate
+     #+BEGIN_SRC sh
+       rake db:migrate
+     #+END_SRC
+
+
+
+
+     
